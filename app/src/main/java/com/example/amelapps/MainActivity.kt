@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("umur", 25)
 
             startActivity(intent)
+            finish()
         }
     }
 }
