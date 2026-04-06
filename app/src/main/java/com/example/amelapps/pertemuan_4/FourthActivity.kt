@@ -44,4 +44,5 @@ class FourthActivity : AppCompatActivity() {
         super.onDestroy()
         Log.e("onDestroy", "{nama_activity} dihapus dari stack")
     }
+
 }
