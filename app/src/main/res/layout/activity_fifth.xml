@@ -43,8 +43,13 @@
             android:gravity="center_horizontal">
 
 
-
             <!-- Tambahkan konten panjang supaya bisa di-scroll -->
+            <Button
+                android:id="@+id/btnWebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buka web meredeka"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

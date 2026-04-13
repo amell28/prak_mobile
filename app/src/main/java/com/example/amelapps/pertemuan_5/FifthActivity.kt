@@ -32,6 +32,12 @@ class FifthActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+
+
+        binding.btnWebView.setOnClickListener {
+            val intent = Intent(this, WebViewActivity::class.java)
+            startActivity(intent)
+        }
     }
         override fun onCreateOptionsMenu(menu: Menu): Boolean {
             menuInflater.inflate(R.menu.main_menu, menu)
@@ -54,6 +60,7 @@ class FifthActivity : AppCompatActivity() {
                     }
                 else -> super.onOptionsItemSelected(item)
             }
+
 
         }
 

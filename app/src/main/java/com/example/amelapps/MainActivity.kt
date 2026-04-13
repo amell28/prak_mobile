@@ -8,7 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.amelapps.databinding.ActivityMainBinding
+import com.example.amelapps.pertemuan_2.SecondActivity
 import com.example.amelapps.pertemuan_4.FourthActivity
+import com.example.amelapps.pertemuan_5.FifthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -30,6 +32,11 @@ class MainActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
         }
 
+        binding.btnToSecond.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnMain.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
 
@@ -38,17 +45,12 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("umur", 25)
 
             startActivity(intent)
-            finish()
         }
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
-                true
-            }
+        binding.btnToFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
 
-            else -> super.onOptionsItemSelected(item)
-        }
     }
+
 }
