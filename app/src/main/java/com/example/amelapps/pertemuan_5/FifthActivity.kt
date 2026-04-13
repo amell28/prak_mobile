@@ -27,6 +27,7 @@ class FifthActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
             title = "Activity Fifth"
             subtitle = "Ini adalah subtitle"
             setDisplayHomeAsUpEnabled(true)
