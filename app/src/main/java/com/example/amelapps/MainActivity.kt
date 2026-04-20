@@ -2,6 +2,7 @@ package com.example.amelapps
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import com.example.amelapps.databinding.ActivityMainBinding
 import com.example.amelapps.pertemuan_2.SecondActivity
 import com.example.amelapps.pertemuan_4.FourthActivity
 import com.example.amelapps.pertemuan_5.FifthActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -50,6 +52,18 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
         }
+        binding.btnLogout.setOnClickListener {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Konfirmasi")
+            .setMessage("Apakah Anda yakin ingin keluar?")
+            .setPositiveButton("Ya") { dialog, _ ->
+                finish()
+            }
+            .setNegativeButton("Batal") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
+    }
 
     }
 
