@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.amelapps.databinding.ActivityAuthBinding
@@ -24,21 +25,25 @@ class AuthActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-
         }
-
+            //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
+            val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
         binding.btnlogin.setOnClickListener {
             val username = binding.editTextText.text.toString()
             val password = binding.editTextTextPassword2.text.toString()
-
             if (username == password){
+
+                sharedPref.edit() {
+                    putBoolean("isLogin", true)
+                    putString("username", username)
+                }
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }else
                 Snackbar.make(binding.root, "Silahkan coba lagi", Snackbar.LENGTH_SHORT)
                     .show()
         }
-
     }
 }
