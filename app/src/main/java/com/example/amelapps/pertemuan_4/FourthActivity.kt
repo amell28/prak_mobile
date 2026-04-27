@@ -28,8 +28,9 @@ class FourthActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Activity Fifth"
+            title = "Activity Fourth"
             subtitle = "Ini adalah subtitle"
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
             }

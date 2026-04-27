@@ -13,6 +13,7 @@ import com.example.amelapps.databinding.ActivityMainBinding
 import com.example.amelapps.pertemuan_2.SecondActivity
 import com.example.amelapps.pertemuan_4.FourthActivity
 import com.example.amelapps.pertemuan_5.FifthActivity
+import com.example.amelapps.pertemuan_7.SevenActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -27,13 +28,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        setSupportActionBar(binding.toolbar)
-        supportActionBar?.apply {
-            title = "Activity Fifth"
-            subtitle = "Ini adalah subtitle"
-            setDisplayHomeAsUpEnabled(true)
-            setDisplayShowHomeEnabled(true)
-        }
+
 
         binding.btnToSecond.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
@@ -55,6 +50,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToSeven.setOnClickListener {
+            val intent = Intent(this, SevenActivity::class.java)
             startActivity(intent)
         }
 
