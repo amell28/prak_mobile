@@ -2,18 +2,16 @@ package com.example.amelapps
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.amelapps.databinding.ActivityMainBinding
-import com.example.amelapps.pertemuan_2.SecondActivity
-import com.example.amelapps.pertemuan_4.FourthActivity
-import com.example.amelapps.pertemuan_5.FifthActivity
-import com.example.amelapps.pertemuan_7.SevenActivity
+import com.example.amelapps.Home.pertemuan_2.SecondActivity
+import com.example.amelapps.Home.pertemuan_4.FourthActivity
+import com.example.amelapps.Home.pertemuan_5.FifthActivity
+import com.example.amelapps.Home.pertemuan_7.SevenActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +26,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
 
         binding.btnToSecond.setOnClickListener {
@@ -44,9 +45,6 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
-
-        //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)

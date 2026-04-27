@@ -1,4 +1,4 @@
-package com.example.amelapps.pertemuan_4
+package com.example.amelapps.Home.pertemuan_4
 
 import android.os.Bundle
 import android.util.Log
