@@ -14,6 +14,7 @@ import com.example.amelapps.Home.pertemuan_2.SecondActivity
 import com.example.amelapps.Home.pertemuan_4.FourthActivity
 import com.example.amelapps.Home.pertemuan_5.FifthActivity
 import com.example.amelapps.Home.pertemuan_7.SevenActivity
+import com.example.amelapps.Home.pertemuan_9.NinthActivity
 import com.example.amelapps.R
 import com.example.amelapps.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -60,6 +61,11 @@ class HomeFragment : Fragment() {
 
         binding.btnToSeven.setOnClickListener {
             val intent = Intent(requireContext(), SevenActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
 

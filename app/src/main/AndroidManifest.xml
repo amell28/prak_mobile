@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AmelApps">
         <activity
+            android:name=".Home.pertemuan_9.NinthActivity"
+            android:exported="false" />
+        <activity
             android:name=".BaseActivity"
             android:exported="false" />
         <activity
@@ -33,7 +36,7 @@
             android:exported="false" />
         <activity
             android:name=".Home.pertemuan_5.FifthActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Home.pertemuan_4.FourthActivity"
             android:exported="false" />
