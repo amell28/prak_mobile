@@ -13,6 +13,6 @@
         android:textColor="@color/white"
         android:textSize="50sp"
         android:fontFamily="@font/poppinsreguler"
-        android:text="Tag B" />
+        android:text="Tab B" />
 
 </FrameLayout>
