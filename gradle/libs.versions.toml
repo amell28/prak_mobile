@@ -1,5 +1,7 @@
 [versions]
-agp = "9.0.1"
+agp = "8.5.2"              # ✅ Turunkan dari 9.0.1 → lebih stable
+kotlin = "1.9.25"          # ✅ Cocok dengan AGP 8.5.x
+ksp = "1.9.25-1.0.20"     # ✅ TAMBAHKAN
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -23,4 +25,5 @@ androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", vers
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }   # ✅ TAMBAHKAN
+android-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }              # ✅ TAMBAHKAN

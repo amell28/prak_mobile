@@ -1,7 +1,6 @@
 package com.example.amelapps
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,8 +9,8 @@ import androidx.fragment.app.Fragment
 import com.example.amelapps.Home.HomeFragment
 import com.example.amelapps.Message.MesssageFragment
 import com.example.amelapps.More.MoreFragment
+import com.example.amelapps.Note.FragmentNotes
 import com.example.amelapps.databinding.ActivityBaseBinding
-import com.example.amelapps.databinding.ActivityMainBinding
 
 class BaseActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBaseBinding
@@ -39,6 +38,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(FragmentNotes())
                     true
                 }
                 else -> false // return false jika item tidak ada yang di klik
