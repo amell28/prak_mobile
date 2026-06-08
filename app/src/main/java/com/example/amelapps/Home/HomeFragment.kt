@@ -12,6 +12,7 @@ import androidx.core.content.edit
 import androidx.lifecycle.lifecycleScope
 import com.example.amelapps.AuthActivity
 import com.example.amelapps.Home.pertemuan_10.TenthActivity
+import com.example.amelapps.Home.pertemuan_13.ThirteenthActivity
 import com.example.amelapps.Home.pertemuan_2.SecondActivity
 import com.example.amelapps.Home.pertemuan_4.FourthActivity
 import com.example.amelapps.Home.pertemuan_5.FifthActivity
@@ -75,6 +76,11 @@ class HomeFragment : Fragment() {
 
         binding.btnToTenth.setOnClickListener {
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToThirteenth.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
 
